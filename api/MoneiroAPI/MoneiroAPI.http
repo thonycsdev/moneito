@@ -1,0 +1,6 @@
+@MoneiroAPI_HostAddress = http://localhost:5040
+
+GET {{MoneiroAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
