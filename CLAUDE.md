@@ -28,7 +28,7 @@ The solution (`api/Moneiro.slnx`) contains a single project: `api/MoneiroAPI/`.
 **Stack:**
 - .NET 10 / ASP.NET Core minimal APIs
 - `Microsoft.AspNetCore.OpenApi` for OpenAPI docs (served at `/openapi/v1.json` in Development)
-- `api/Infra/compose.yml` — placeholder for Docker Compose (currently empty)
+- `api/Infra/compose.yml` — Docker Compose with Postgres 16 (user/pass/db: `moneiro`, port `5432`)
 
 **Entry point:** `api/MoneiroAPI/Program.cs` — configures services and maps routes using top-level statements and minimal API style (no controllers).
 
