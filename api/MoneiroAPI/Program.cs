@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
+using MoneiroService;
 using MoneiroRepository;
+using MoneiroDomain.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,7 @@ if (connectionString is null)
     Console.WriteLine("Connection String not configured");
 }
 builder.Services.AddDbContext<MoneiroDbContext>(opt => opt.UseNpgsql(connectionString));
+builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -1,4 +1,6 @@
 <Solution>
   <Project Path="MoneiroAPI/MoneiroAPI.csproj" />
+  <Project Path="MoneiroDomain/MoneiroDomain.csproj" />
   <Project Path="MoneiroRepository/MoneiroRepository.csproj" />
+  <Project Path="MoneiroService/MoneiroService.csproj" />
 </Solution>
