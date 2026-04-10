@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using MoneiroService;
 using MoneiroRepository;
 using MoneiroDomain.Interfaces;
+using MoneiroService.Interfaces;
+using MoneiroService.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,7 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' is not configured.");
 builder.Services.AddDbContext<MoneiroDbContext>(opt => opt.UseNpgsql(connectionString));
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
+builder.Services.AddScoped<IUserService, UserService>();
 
 var app = builder.Build();
 
