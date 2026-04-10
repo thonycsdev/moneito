@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace MoneiroRepository.Migrations
 {
     /// <inheritdoc />
-    public partial class usermigration : Migration
+    public partial class CreateUsersTable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

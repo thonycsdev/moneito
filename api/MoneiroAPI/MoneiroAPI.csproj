@@ -15,7 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\MoneiroRepository\MoneiroRepository.csproj" />
+<ProjectReference Include="..\MoneiroRepository\MoneiroRepository.csproj" />
     <ProjectReference Include="..\MoneiroDomain\MoneiroDomain.csproj" />
     <ProjectReference Include="..\MoneiroService\MoneiroService.csproj" />
   </ItemGroup>

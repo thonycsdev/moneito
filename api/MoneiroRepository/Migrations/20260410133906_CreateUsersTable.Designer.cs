@@ -12,8 +12,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace MoneiroRepository.Migrations
 {
     [DbContext(typeof(MoneiroDbContext))]
-    [Migration("20260409222002_user-migration")]
-    partial class usermigration
+    [Migration("20260410133906_CreateUsersTable")]
+    partial class CreateUsersTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

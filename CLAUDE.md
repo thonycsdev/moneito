@@ -48,3 +48,4 @@ The project is early-stage. The only endpoint is the scaffolded `GET /weatherfor
 - Nullable reference types are enabled — always handle nullability explicitly.
 - Implicit usings are enabled — no need to add common `using` directives manually.
 - Follow minimal API patterns (route handlers in `Program.cs` or extension methods) rather than adding MVC controllers unless the project explicitly adopts that pattern.
+- EF Core migration names must use **PascalCase** describing the change (e.g. `CreateUsersTable`, `AddEmailIndexToUsers`). Never use lowercase or kebab-case names.
