@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\MoneiroDomain\MoneiroDomain.csproj" />
+    <ProjectReference Include="..\MoneiroRepository\MoneiroRepository.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -4,6 +4,7 @@ using MoneiroRepository;
 using MoneiroDomain.Interfaces;
 using MoneiroService.Interfaces;
 using MoneiroService.Services;
+using MoneiroRepository.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ string connectionString = builder.Configuration.GetConnectionString("DefaultConn
 builder.Services.AddDbContext<MoneiroDbContext>(opt => opt.UseNpgsql(connectionString));
 builder.Services.AddScoped<IPasswordHasher, PasswordHasher>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 var app = builder.Build();
 

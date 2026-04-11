@@ -1,7 +1,7 @@
 using MoneiroDomain.Interfaces;
 
 namespace MoneiroService;
-
+//Library implementation
 public class PasswordHasher : IPasswordHasher
 {
     public string Hash(string password) =>
