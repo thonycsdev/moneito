@@ -1,6 +1,7 @@
 using MoneiroDomain.Entities;
 using MoneiroRepository.Interfaces;
 using MoneiroService.DTOs;
+using MoneiroService.Exceptions;
 using MoneiroService.Interfaces;
 
 namespace MoneiroService.Services;
@@ -18,7 +19,7 @@ public class UserService : IUserService
     {
         User? existingUser = await _userRepository.GetUserByEmail(input.Email);
         if (existingUser is not null)
-            throw new InvalidDataException("Email already present");
+            throw new ConflictException("User", "Email", input.Email);
 
         string hashedPassword = _userPasswordHasher.HashUserPassword(input.Password);
 
